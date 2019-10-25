@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".ItunesActivity">
+
 
     <LinearLayout
 
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="4dp"
         android:layout_marginTop="32dp"
-        android:layout_width="match_parent"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,5 +28,49 @@
 
 
     </LinearLayout>
+
+
+    <!-- Text Displayed At Top -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:text="Buscar"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/edit_buscar"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Artista, canciones o podscasts"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:onClick="buscar"
+        app:layout_constraintStart_toEndOf="@+id/edit_buscar"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@android:drawable/ic_search_category_default" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
